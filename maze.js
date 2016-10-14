@@ -25,14 +25,15 @@ function outOfBounds(){
 
 function end() {
     if(result) {
-    	alert("You win! :)");
+    	document.getElementById('status').innerHTML ='You win! :)';
     } else {
-        alert("Sorry, you lost. :(");
+        document.getElementById('status').innerHTML ='Sorry, you lost. :( Click the S to restart.';
     }
 }
 
 function start() {
 	result = true;
+	document.getElementById('status').innerHTML ='See if you can get to the end!';
 	var border =document.querySelectorAll('div.boundary');
 	for (var i =0; i <=4; i++) {
 		border[i].setAttribute('style','background-color: #eeeeee');
